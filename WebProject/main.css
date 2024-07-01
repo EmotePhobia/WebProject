@@ -1,0 +1,861 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body, html{
+    display: block;
+    font-size: 16px; 
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+header{
+    background-color:#FFF;
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    height: 8%;
+    padding: 0 1.7% 0 4%;
+}
+.nav-left{
+    display: flex;
+    width: 50vw;
+    height: 8%;
+    justify-content: left;
+    align-items: center;
+
+}
+.nav-left img{
+    margin-left: 10%;
+    padding: 2%;
+    
+    
+}
+.nav-right{
+    display: flex;
+    width: 50%;
+    height: 8%;
+    text-align: right;
+    justify-content: right;
+    align-items: center;
+    padding-right: 8%;
+
+}
+.nav-list{
+    text-decoration: none;
+
+}
+.nav-list li{
+    display:inline-block;
+    margin: 1em;
+    font-weight: 630;
+}
+.nav-right a{
+    text-decoration: none;
+    color: black;
+}
+.nav-right a:hover{
+    color: #60D4D3;
+    transition-duration: all 0.7s;
+}
+main{
+    background-color:#F5F5F5;
+    width: 100%;
+    height:151%;
+    display:flex;
+    flex-direction: column;
+}
+.main-title{
+    display: flex;
+    height:20%;
+    width: 100%;
+    color: gray;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 2rem;
+}
+
+.main-title h1{
+    color: black;
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+}
+.main-gallery{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.imagesOfWork{
+    position: relative;
+    width: 25%;
+    height: 33.33%;
+    overflow: hidden;
+}
+.images{
+    width: 100%;
+    height: 100%;
+    transition: 0.7s;
+}
+.eyeIcon{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 36% 42% 42% 44%;
+    transition: opacity 0.7s ease;
+}
+.eyeIcon img{
+    width: 3rem;
+    height: 3rem;
+    transition: 0.7s;
+}
+.imagesOfWork:hover .eyeIcon{
+    opacity: 1;
+    cursor: pointer;
+
+}
+.imagesOfWork:hover {
+    background-color: #31CDC9;
+    transition: 0.7s;
+}
+.imagesOfWork:hover .images{
+    opacity: 0.3;
+}
+.main_about{
+    display: flex;
+    width: 100%;
+    height: 200%;
+    flex-direction: column;
+}
+.sec_aboutMe{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 25%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+.sec_aboutMe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/AboutMeImg/AutorImg1.jpg');
+    background-position: center;
+    filter: brightness(0.4);
+    z-index: -1;
+}
+.sec_aboutMe h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-left: 4%;
+    letter-spacing: 2px;
+}
+.sec_aboutMe p{
+    font-size: 1.2rem;
+    letter-spacing:1px;
+    margin-left: 4%;
+}
+
+.sec_expirience{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 12%;
+    background-color:#10C9C3 ;
+}
+.expirience_info{
+    display: flex;
+    flex-wrap:wrap ;
+    align-items: center;
+    width: 22%;
+    height: 12%;
+    color: white;
+    font-weight: 400;
+    font-size: 1.1rem;
+    gap: 1rem;
+}
+.expirience_info h3{
+    margin-left: 0.3em;
+}
+.sec_aboutMe2{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.AboutMeImg{
+    width: 50%;
+    height: 70%;
+    background-image: url(./images/AboutMeImg/imgOfArt.jpg);
+}
+.AboutMeImg img{
+    width: 100%;
+    height: 100%;
+}
+._AboutMeParahraph{
+    background-color: #F6F6F6;
+    display: flex;
+    width: 50%;
+    height: 70%;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    letter-spacing: 0.7px;
+    line-height: 1.7rem;
+}
+._AboutMeParahraph div{
+    width: 55%;
+}
+._AboutMeParahraph h1{
+    font-size: 2.4rem;
+    margin-bottom: 0.8em;
+}
+._AboutMeParahraph p{
+    margin: 1.7em 0 1.7em 0;
+    color: gray;
+}
+.About_Advert{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 56%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.About_Advert div{
+    color: gray;
+    margin: 2rem;
+    letter-spacing: 1px;
+}
+.About_Advert h1{
+    font-size: 2.2rem;
+    letter-spacing: 0.7px;
+}
+
+.button_lets_talk{
+    width: 11%;
+    height: 10%;
+    color: white;
+    text-decoration: none;
+    font-weight: 650;
+    background-color: #10C9C3;
+    border: none;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+.button_lets_talk:hover{
+    transition-duration: all 0.7s;
+    background-color:#252525 ;
+    cursor: pointer;
+}
+.main_contact{
+    display:flex;
+    width: 100%;
+    height: 130%;
+    padding: 4% 10% 0 10%;
+}
+.section_contact{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+}
+.art_contact{
+    width: 30%;
+}
+.art_contact h1{
+    font-size: 1.5rem;
+}
+.art_contact  li{
+    margin-top: 5%;
+    list-style: none;
+}
+.art_contact li > p{
+    display: inline;
+    color:gray;
+    margin: 1.5%
+}
+.art_contact p{
+    display: block;
+    color: gray;
+    margin: 0;
+}
+.contact_form{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+.art_contact_form{
+    width: 65%;
+}
+
+.Name::placeholder{
+    padding-left: 5%;
+
+}
+.Email::placeholder{
+    padding-left: 5%;
+}
+.Name, .Email{
+    width: 40.2%;
+    height: 16%;
+    margin: 2% 0 2% 0; 
+    border: none;
+}
+.Name{
+    margin-right: 2%;
+}
+.Title::placeholder{
+    padding-left: 2.5%;
+}
+.Title{
+    width: 82.7%;
+    height: 16%;
+    border: none;
+    margin-bottom: 2%;
+}
+.Comment::placeholder{
+    padding-left: 2.5%;
+    transform: translateY(1rem);
+}
+.Comment{
+    width: 82.7%;
+    height: 40%;
+    border: none;
+    margin-bottom: 4%;
+}
+.button_div{
+    display: flex;
+    width: 82.7%;
+    height: 100%;
+}
+.form_button{
+    width: 22%;
+    height:16%;
+    color: white;
+    font-weight: 650;
+    background-color: #10C9C3;
+    border: none;
+    text-align: center;
+}
+.form_button:hover{
+    transition-duration: all 0.7s;
+    background-color:#252525 ;
+    cursor: pointer;
+}
+
+.main_map{
+    display: flex;
+    justify-content: center;
+    height:65%;
+    padding: 2% 0 10% 0;
+    margin-top:8%;
+    
+}
+footer{
+    background-color: #141414;
+    color:#BCBCBC ;
+    height:25%;
+    display: flex;
+    flex-direction: row;
+    padding: 4em;
+    justify-content: center;
+}
+footer li, p{
+    list-style: none;
+    margin:0.4rem;
+    font-size: 1em;
+}
+.footer_div_info{
+    width: 30%;
+    height:100%; 
+}
+.footer_div_list1{
+    width: 10%;
+    height: 100%;
+    
+}
+.footer_div_list2{
+    width: 10%;
+    height: 100%;
+    margin-right: 2em;
+}
+.footer_div_list3{
+    width: 10%;
+    height: 100%;
+}
+
+footer h4{
+    font-size: 1.1em;
+    margin: 0.4rem 0 1.2rem 0.4rem;
+    color: white;
+}
+@media (max-width: 1024px){
+    
+    .eyeIcon{
+        padding: 60% 42% 42% 40%;
+    }
+    ._AboutMeParahraph{
+        width: 40%;
+
+    }
+    .AboutMeImg{
+        width: 60%;
+    }
+    .sec_expirience{
+        justify-content: center;
+    }
+    .expirience_info{ 
+        font-size: 14px;
+        gap: 1rem;
+        margin-left:1.8rem;
+    }
+    .art_contact{
+        line-height: 1.5rem;
+    }
+    .form_button{
+        width: 30%;
+        height: 14%;
+    }
+    .footer_div_info{
+        padding-left:0; 
+    }
+
+}
+@media (min-width: 768px) and (max-width: 1023px){
+    .main-title h1{
+        font-size: 42px;
+    }
+    .main-gallery{
+        height: 71.4%;
+    }
+    .imagesOfWork{
+        width: 33.3%;
+        height: 28%;
+    }
+    .eyeIcon{
+        padding: 46%;
+    }
+    .sec_expirience{
+        height: 10%;
+    }
+    .expirience_info{
+        width: 21%;
+        font-size: 10px;
+        flex-wrap: nowrap;
+    }
+    .expirience_info img{
+        height: 90%;
+        width: 90%;
+    }
+    ._AboutMeParahraph{
+        width: 40%;
+        height: 50%;
+        font-size: 12px;
+    }
+    ._AboutMeParahraph > div{
+        width: 80%;
+    }
+    ._AboutMeParahraph h1{
+        margin-top: 1rem;
+        font-size: 34px;
+    }
+    .AboutMeImg{
+        width: 60%;
+        height: 50%;
+    }
+    .About_Advert{
+        height: 80%;
+    }
+    .button_lets_talk{
+        width: 20%;
+        height: 7%;
+    }
+    .section_contact{
+        height: 35%;
+        margin-top: 5%;
+        font-size: 12px;
+    }
+    .art_contact{
+        width: 50%;
+    }
+    .contact_form{
+        justify-content: flex-start;
+        margin-left: 10%;
+        width: 100%;
+    }
+    .Name, .Email{
+        height: 14%;
+        width: 44%;
+    }
+    .Title{
+        height: 14%;
+        width: 90%;
+    }
+    .section_contact textarea{
+        height: 35%;
+        width: 90%;
+    }
+    .form_button{
+        width: 45%;
+        height: 12%;
+    }
+    .main_map{
+        height: 50%;
+    }
+    footer{
+        font-size:13px;
+    }
+    .footer_div_list1{
+        font-size: 12px;
+        margin-right: 1rem;
+    }
+}
+@media (min-width: 480px)  and (max-width:767px) {
+    body, html{
+        height: 170%;
+    }
+    header{
+        font-size: 12px;
+        height: 3%;
+    }
+    .nav-left{
+        width: 45%;
+    }
+    .nav-right{
+        width: 55%;
+    }
+    .main-title{
+        height: 6% ;
+    }
+    .main-title h1{
+        font-size: 30px;
+    }
+    .main-title p{
+        font-size: 14px;
+    }
+    .main-gallery{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 100%;
+        align-items: center;
+    }
+    .imagesOfWork {
+        width: 60%;
+    }
+    .eyeIcon{
+        padding: 42% 42% 42% 42%;
+    }
+    .main_about{
+        height: 100%;
+    }
+    .sec_aboutMe{
+        height: 40%;
+        text-align: center;
+    }
+    .sec_aboutMe p{
+        font-size: 14px;
+    }
+    .sec_expirience{
+        flex-wrap: wrap;
+        height: 12%;
+    }
+    .expirience_info{
+        width: 40%;
+    }
+    .sec_aboutMe2{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .AboutMeImg{
+        width: 100%;
+        height: 80%;
+    }
+    ._AboutMeParahraph{
+        width: 100%;
+        height: 80%;
+        justify-content: center;
+    }
+    .About_Advert{
+        font-size: 14px;
+    }
+    .button_lets_talk{
+        width: 25%;
+    }
+    .main_contact{
+        height: 80%;
+        justify-content: start;
+    }
+    .section_contact{
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        height: 50%;
+    }
+    .art_contact{
+        width: 90%;
+        margin-bottom: 20%
+    }
+    .art_contact_form{
+        width: 90%;
+        height: 120%;
+    }
+    .contact_form{
+        margin: 0;
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .contact_form input{
+        width: 100%;
+        height: 25%;
+        margin-top: 2%;
+    }
+    .Comment{
+        width: 100% !important;
+        height: 100% !important;
+        margin-top: 2%;
+    }
+    .Email::placeholder{
+        padding: 2.5%;
+    }
+    .Name::placeholder{
+        padding: 2.5%;
+    }
+    .form_button{
+        width: 45%;
+        height: 22%;
+    }
+    footer{
+        height: 23%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        font-size: 14px;
+        align-items: center;
+        text-align: center;
+    }
+    .footer_div_info{
+        width: 40%;
+        padding-top: 1em;
+    }
+    .footer_div_list1, .footer_div_list2, .footer_div_list3{
+        width: 100%;
+        margin: 0;
+        padding-top: 1rem;
+    }
+}
+@media (min-width: 320px)  and (max-width:479px){
+    body, html{
+        height: 170%;
+    }
+    header{
+        flex-direction: column;
+        justify-content: center;
+        height: 10%;
+    }
+    .nav-left{
+        width: 100vw;
+        height: 20%;
+        justify-content: center;
+        margin-top: 2%;
+        padding-right: 9%;
+    }
+    .nav-right{
+        width: 100%;
+        height: 80%;
+        padding-right: 0;
+        justify-content: center;
+    }
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 30%;
+    }
+    .main-title{
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    .main-title{
+        height: 6% ;
+    }
+    .main-title h1{
+        font-size: 30px;
+    }
+    .main-title p{
+        font-size: 14px;
+    }
+    .main-gallery{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 90%;
+        align-items: center;
+    }
+    .eyeIcon{
+        padding: 60% 48% 36% 38%;
+    }
+    .imagesOfWork {
+        width: 60%;
+    }
+    .main_about{
+        height: 100%;
+    }
+    .sec_aboutMe{
+        height: 40%;
+        text-align: center;
+    }
+    .sec_aboutMe p{
+        font-size: 14px;
+    }
+    .sec_expirience{
+        flex-wrap: wrap;
+        height: 12%;
+        align-items: start;
+        padding-top: 10%;
+    }
+    .expirience_info{
+        width: 40%;
+    }
+    .sec_aboutMe2{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .AboutMeImg{
+        width: 100%;
+        height: 80%;
+    }
+    ._AboutMeParahraph{
+        width: 100%;
+        height: 80%;
+        padding-top: 10%;
+        justify-content: center;
+        text-align: center;
+    }
+    .About_Advert{
+        font-size: 14px;
+        padding-bottom: 10%;
+        padding-top: 10%;
+        height: 80%;
+    }
+    .button_lets_talk{
+        width: 40%;
+        height: 20% !important;
+    }
+    .main_contact{
+        height: 80%;
+        justify-content: start;
+    }
+    .section_contact{
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        height: 60%;
+        padding-top: 30%;
+    }
+    .art_contact{
+        width: 90%;
+        height: 80%;
+        margin-bottom: 20%
+    }
+    .art_contact_form{
+        width: 90%;
+        height: 120%;
+    }
+    .contact_form{
+        margin: 0;
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .contact_form input{
+        width: 100%;
+        height: 25%;
+        margin-top: 2%;
+        margin-right: 0;
+    }
+    .Comment{
+        width: 100% !important;
+        height: 100% !important;
+        margin-top: 2%;
+    }
+    .Email::placeholder{
+        padding: 2.5%;
+    }
+    .Name::placeholder{
+        padding: 2.5%;
+    }
+    .form_button{
+        width: 100%;
+        height: 20%;
+    }
+    .main_map{
+        height: 30%;
+    }
+    footer{
+        height: 30%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        font-size: 14px;
+        align-items: center;
+        text-align: center;
+        padding: 2em;
+    }
+    .footer_div_info{
+        width: 60%;
+        padding-top: 1em;
+    }
+    .footer_div_list1, .footer_div_list2, .footer_div_list3{
+        width: 100%;
+        margin: 0;
+        padding-top: 1rem;
+    }
+}
+@media (min-width: 375px) and (max-width:400px) {
+    .eyeIcon{
+        padding: 42% 52% 48% 40%;
+    }
+    .sec_aboutMe{
+        height: 24%;
+    }
+    .sec_expirience{
+        height: 22%;
+    }
+    .button_lets_talk{
+        height: 50%;
+    }
+    .sec_aboutMe2{
+        height: 60%;
+    }
+    footer{
+        height: 40%;
+    }
+    
+}
